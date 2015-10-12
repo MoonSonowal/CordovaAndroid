@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <script type="text/javascript" src="js/fusioncharts.js"></script>
+    <script type="text/javascript" src="js/fusioncharts.widgets.js"></script>
+<script type="text/javascript" src="js/themes/fusioncharts.theme.fint.js"></script>
+<script type="text/javascript">
+  FusionCharts.ready(function () {
+    var cSatScoreChart = new FusionCharts({
+        type: 'angulargauge',
+        renderAt: 'chart-container',
+        width: '400',
+        height: '300',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "manageresize": "1",
+                    "origw": "415",
+                    "origh": "415",
+                    "managevalueoverlapping": "1",
+                    "autoaligntickvalues": "1",
+                    "tickvaluedistance": "1",
+                    "bgcolor": "FFFFFF",
+
+
+                    "majortmnumber": "11",
+                    "majortmcolor": "646F8F",
+                    "majortmheight": "9",
+                    "minortmnumber": "5",
+                    "minortmcolor": "646F8F",
+                    "minortmheight": "3",
+                    "showgaugeborder": "0",
+                    "gaugeouterradius": "100",
+                    "gaugeinnerradius": "80",
+                    "gaugeoriginx": "210",
+                    "gaugeoriginy": "210",
+                    "gaugealpha": "50",
+                    "placevaluesinside": "1",
+                    "tooltipbgcolor": "F2F2FF",
+                    "tooltipbordercolor": "6A6FA6",
+                    "gaugefillmix": "",
+                    "showshadow": "0",
+                    "annrenderdelay": "0",
+                    "pivotradius": "0",
+
+                    "showborder": "0",
+                    "gaugestartangle": "200",
+                    "gaugeendangle": "-90",
+
+                    "refreshinterval": "6",
+                    "showTickMarks": "0"
+            },
+                "colorrange": {
+                "color": [{
+
+                    "code": "AB401C"
+                }]
+            },
+                "dials": {
+                "dial": [{
+                    "value": "2265",
+                        "bgcolor": "#ffffff",
+                        "borderalpha": "0",
+                        "basewidth": "0",
+                        "topwidth": "0"
+                }]
+            },
+
+                "annotations": {
+                "groups": [{
+                    "x": "210",
+                        "y": "210",
+                        "showbelow": "1",
+                        "items": [
+
+
+                    {
+                        "type": "arc",
+                            "x": "0",
+                            "y": "0",
+                            "radius": "120",
+                            "innerradius": "100",
+                            "startangle": "-80",
+                            "endangle": "190",
+                            "fillcolor": "#CF5027"
+                    }, {
+                        "type": "arc",
+                            "x": "0",
+                            "y": "0",
+                            "radius": "140",
+                            "innerradius": "120",
+                            "startangle": "-90",
+                            "endangle": "190",
+                            "fillcolor": "F86E01"
+                    }, {
+                        "type": "arc",
+                            "x": "0",
+                            "y": "0",
+                            "radius": "160",
+                            "innerradius": "140",
+                            "startangle": "-100",
+                            "endangle": "190",
+                            "fillcolor": "F79A00"
+                    }, {
+                        "type": "arc",
+                            "x": "0",
+                            "y": "0",
+                            "radius": "180",
+                            "innerradius": "160",
+                            "startangle": "-10",
+                            "endangle": "200",
+                            "fillcolor": "FFD800"
+                    }, {
+                        "id": "high-star1",
+                            "type": "circle",
+                            "x": "165",
+                            "y": "30",
+                            "radius": "10",
+                            "color": "#ffffff",
+                            "border": "2",
+                            "borderColor": "#F79A00"
+                    }, {
+                        "id": "high-star2",
+                            "type": "circle",
+                            "x": "265",
+                            "y": "30",
+                            "radius": "10",
+                            "color": "#ffffff",
+                            "border": "2",
+                            "borderColor": "#F79A00"
+                    }, {
+                        "id": "high-line",
+                            "type": "line",
+                            "x": "175",
+                            "y": "30",
+                            "tox": "255",
+
+                            "color": "#F79A00",
+
+                            "thickness": "1"
+                    }, {
+                        "id": "label",
+                            "type": "text",
+                            "text": "Fri",
+                            "fillcolor": "#000000",
+                            "rotate": "90",
+                            "bold": "1",
+                            "fontsize": "12",
+                            "x": "300",
+                            "y": "30"
+                    }]
+                }]
+            }
+        }
+    }).render();
+});
+</script>
+  </head>
+  <body ng-app="starter">
+
+   
+        <div id="chart-container">FusionCharts XT will load here!</div>
+   
+  </body>
+</html>
